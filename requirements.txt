@@ -3,3 +3,4 @@ django-allauth==0.52.0
 django-extensions==3.2.1
 channels
 daphne
+websocket-client
