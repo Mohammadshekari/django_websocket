@@ -2,6 +2,7 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 from django.template.loader import get_template
 
+
 class NotificationConsumer(WebsocketConsumer):
     def connect(self):
         self.user = self.scope['user']

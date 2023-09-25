@@ -9,10 +9,11 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "htmx_websockets.settings")
 application = get_asgi_application()
 
 import core.routing
+import chat.socket.routing
 
 application = ProtocolTypeRouter({
     "http": application,
     "websocket": AllowedHostsOriginValidator(
-        AuthMiddlewareStack(URLRouter(core.routing.websocket_urlpatterns))
+        AuthMiddlewareStack(URLRouter(chat.socket.routing.websocket_urlpatterns)),
     ),
 })
