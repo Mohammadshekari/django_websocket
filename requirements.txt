@@ -4,3 +4,4 @@ django-extensions==3.2.1
 channels
 daphne
 websocket-client
+rel
